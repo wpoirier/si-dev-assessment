@@ -8,5 +8,6 @@ class PagesController < ApplicationController
     puts params["text"];
     @phone = params["phone"];
     @text = params["text"];
+    
   end
 end
