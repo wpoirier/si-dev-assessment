@@ -2,18 +2,23 @@
 <title>SMS Web App for SI</title>
 
 <div id="main_text">
-    <h1><br>SMS Web App</h1>
+    <div id="header_text">
+        <h1><br>SMS Web App</h1>
+    </div>
+    <br><br>
     <p>&nbsp Welcome! This web application allows you to send a text message to a given phone number.</p>
     <br>
     <br>
-    <%= form_tag("/sms/send", method: "post") do %>
-        &nbsp
-        <%= label_tag(:phone, "Phone #")%>
-        <%= text_field_tag(:phone) %>
-        <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= label_tag(:text, "Text")%>
-        <%= text_field_tag(:text) %>
-        <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <%= submit_tag("Submit") %>
-    <% end %>
+    <div id="form">
+        <%= form_tag("/sms/send", method: "post") do %>
+            &nbsp
+            <%= label_tag(:phone, "Phone #")%>
+            <%= text_field_tag(:phone) %>
+            <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= label_tag(:text, "Text")%>
+            <%= text_field_tag(:text) %>
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= submit_tag("Submit") %>
+        <% end %>
+    </div>
 </div>

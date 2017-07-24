@@ -1,13 +1,15 @@
-<h1>Your Request Has Been Submitted</h1>
-<!--<p>Find me in app/views/pages/sms.html.erb</p> -->
-<br>
+<div id = "main_text">
+    <div id="header_text"><br><h1>Message Sent!</h1></div>
+    <br>
+    <div id="sms_confirmation">
+        <!--<p>Find me in app/views/pages/sms.html.erb</p> -->
+        <h2>Your Message Was Submitted. <br>Please check your phone.</h2>
+        <br>
+        <p>Your Phone Number Was: <br> <%= @phone %> </p>
+        <br>
+        <p>Your Text Was: <br> <%= @text%> </p>
+        <br>
+        <div id="back_button"><a href=".."><b>back</b></a></div>
+    </div>
+</div>
 
-<p>Your Phone Number Was: </p>
-<%@phone%>
-<br>
-<p>Your Text Was: </p>
-<%@text%>
-<br>
-<a href="..">back</a>
-
-<%#byebug%>
